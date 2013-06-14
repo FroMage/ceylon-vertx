@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-doc "A term allows a [[Thenable]] to be combined with a promise to form a new term."
-by "Julien Viet"
-license "ASL2"
+doc("A term allows a [[Thenable]] to be combined with a promise to form a new term.")
+by("Julien Viet")
+license("ASL2")
 shared interface Term<out Element, out T>
   satisfies Thenable<T>
   given T satisfies Element[] {
 	
-  doc "Combine the current thenable with a provided promise and return an [[Term]] object that
+      "Combine the current thenable with a provided promise and return an [[Term]] object that
         - resolves when both the current thenable and the other promise are resolved
         - rejects when the current thenable or the other promise is rejected
         

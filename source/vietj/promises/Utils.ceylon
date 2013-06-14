@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-@doc "Dispatch to the function the provided argument and return the result"
-by "Julien Viet"
-license "ASL2"
+doc("Dispatch to the function the provided argument and return the result")
+by("Julien Viet")
 Return dispatch<Return, Argument>(Return(Argument)|Return() f, Argument arg) {
   if (is Return(Argument) f) {
   	return f(arg);

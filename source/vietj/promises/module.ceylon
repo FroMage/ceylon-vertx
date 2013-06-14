@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-doc "A module that provides Promises/A+ semantics adapted to the Ceylon language.
+    "A module that provides Promises/A+ semantics adapted to the Ceylon language.
 
      This implementation conforms to the [Promises/A+](https://github.com/promises-aplus/promises-tests) specification although
      it is not a formal implementation due to the adaptation to the Ceylon language and type system. However it attempts
@@ -140,8 +140,8 @@ doc "A module that provides Promises/A+ semantics adapted to the Ceylon language
      occurs inside the invocation of then.
      - the *Promise Resolution Procedure* is implemented for objects or promises but not for *thenable* as it requires
      a language with dynamic typing."
-by "Julien Viet"
-license "ASL2"
+by("Julien Viet")
+license("ASL2")
 module vietj.promises '0.3.1' {
   import java.base '7';
 }

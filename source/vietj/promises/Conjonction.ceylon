@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-doc "Combines two promises into a new promise.
+    "Combines two promises into a new promise.
       
       The new promise
       - is resolved when both promises are resolved
       - is rejected when any of the two promise is rejected
       "
-by "Julien Viet"
-license "ASL2"
+by("Julien Viet")
+license("ASL2")
 class Conjonction<out Element, out First, Rest>(Promise<First> first, Promise<Rest> rest)
  satisfies Term<Element, Tuple<First|Element, First, Rest>>
  given First satisfies Element

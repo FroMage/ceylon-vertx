@@ -16,15 +16,15 @@
 
 import java.util.concurrent.locks { ReentrantLock }
 
-doc "The deferred class is the primary implementation of the [[Promise]] interface.
+    "The deferred class is the primary implementation of the [[Promise]] interface.
       
      The promise is accessible using the `promise` attribute of the deferred.
       
      The deferred can either be resolved or rejected via the `resolve` or `reject` methods. Both
      methods accept an argument or a promise to the argument, allowing the deferred to react
      on a promise."
-by "Julien Viet"
-license "ASL2"
+by("Julien Viet")
+license("ASL2")
 shared class Deferred<Value>() satisfies Transitionnable<Value> & Promised<Value> {
 
   ReentrantLock lock = ReentrantLock();
@@ -34,19 +34,19 @@ shared class Deferred<Value>() satisfies Transitionnable<Value> & Promised<Value
   
   listeners = listeners.withTrailing([(Value v) => current = fulfilled, (Exception e) => current = rejected]);
 
-  doc "Return the current deferred status."
+  doc("Return the current deferred status.")
   shared Status status => current;
 
-  doc "Return true if the current promise is fulfilled."
+  doc("Return true if the current promise is fulfilled.")
   shared Boolean isFulfilled => status == fulfilled;
 
-  doc "Return true if the current promise is rejected."
+  doc("Return true if the current promise is rejected.")
   shared Boolean isRejected => status == rejected;
 
-  doc "Return true if the current promise is fulfilled."
+  doc("Return true if the current promise is fulfilled.")
   shared Boolean isPending => status == pending;
 
-  doc "The promise of this deferred."
+  doc("The promise of this deferred.")
   shared actual object promise extends Promise<Value>() {
 
     shared actual Promise<Result> then___<Result>(

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-doc "A promise represents a value that may not be available yet. The primary method for
+    "A promise represents a value that may not be available yet. The primary method for
       interacting with a promise is its `then` method. A promise is a [[Thenable]] element
      restricted to a single value."
-by "Julien Viet"
-license "ASL2"
+by("Julien Viet")
+license("ASL2")
 shared abstract class Promise<out Value>() satisfies Term<Value, [Value]> {
 
   // todo optimize that and instead implement a Promise

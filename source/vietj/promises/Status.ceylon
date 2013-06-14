@@ -13,23 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-doc "A promise must be in one of three states: pending, fulfilled, or rejected." 
-by "Julien Viet"
-license "ASL2"
+doc("A promise must be in one of three states: pending, fulfilled, or rejected.") 
+by("Julien Viet")
+license("ASL2")
 shared abstract class Status(shared String name) of pending | fulfilled | rejected {}
 
-doc "When pending, a promise may transition to either the fulfilled or rejected state."
-by "Julien Viet"
-license "ASL2"
+doc("When pending, a promise may transition to either the fulfilled or rejected state.")
+by("Julien Viet")
 shared object pending extends Status("Pending") {}
 
-doc "When fulfilled, a promise must not transition to any other state and must have a value, which must not change."
-by "Julien Viet"
-license "ASL2"
+doc("When fulfilled, a promise must not transition to any other state and must have a value, which must not change.")
+by("Julien Viet")
 shared object fulfilled extends Status("Fulfilled") {}
 
-doc "When rejected, a promise must not transition to any other state and must have a reason, which must not change."
-by "Julien Viet"
-license "ASL2"
+doc("When rejected, a promise must not transition to any other state and must have a reason, which must not change.")
+by("Julien Viet")
 shared object rejected extends Status("Rejected") {}
 
