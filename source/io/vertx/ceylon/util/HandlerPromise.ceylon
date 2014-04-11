@@ -30,7 +30,7 @@ shared class HandlerPromise<Value, Result>(Value(Result) transform)
             try {
                 value val = transform(result);
                 deferred.resolve(val);
-            } catch(Exception e) {
+            } catch(Throwable e) {
                 deferred.reject(e);
             }
         } else {

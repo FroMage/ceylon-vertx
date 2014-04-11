@@ -180,8 +180,8 @@ module io.vertx.ceylon "0.3.11" {
     shared import io.vertx.platform "2.0.2-final";
     shared import java.base "7";
     shared import ceylon.promises "0.5.0";
-    shared import ceylon.net "1.0.0";
-    shared import ceylon.json "1.0.0";
+    shared import ceylon.net "1.0.1";
+    shared import ceylon.json "1.0.1";
     import ceylon.io "1.0.0";
     import ceylon.collection "1.0.0";
 

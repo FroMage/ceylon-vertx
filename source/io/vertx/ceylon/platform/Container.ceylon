@@ -4,7 +4,7 @@ import ceylon.json { Object }
 import io.vertx.ceylon.util { fromObject, toObject, HandlerPromise }
 import java.lang { String_=String }
 import ceylon.promises { Promise }
-import ceylon.collection { HashMap }
+import ceylon.collection { HashMap, unmodifiableMap }
 
 JsonObject? toConf(Object? c) {
     if (exists c) {
@@ -39,7 +39,7 @@ shared class Container(Container_ delegate) {
     }
     
     "Get an umodifiable map of system, environment variables."
-    shared Map<String, String> env = HashMap(tmp);
+    shared Map<String, String> env = unmodifiableMap(tmp);
 
     "Get the verticle configuration"
     JsonObject? config_ = delegate.config();
