@@ -66,7 +66,7 @@ shared object jsonBody satisfies BodyType<JSONObject> {
 	shared actual Boolean accept(String mimeType) => mimeType.equals("application/json");
 	shared actual JSONObject parse(Charset? charset, Buffer data) {
 		String s = textBody.parse(charset, data);
-		value parsed = parseJSON(s);
+		assert(is JSONObject parsed = parseJSON(s));
 		return parsed;
 	}
 }
